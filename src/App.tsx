@@ -19,9 +19,6 @@ export default function App() {
   return (
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
-      <MDButton size="large" variant="contained" color="primary">
-        Button
-      </MDButton>
     </ThemeProvider>
   );
 }
