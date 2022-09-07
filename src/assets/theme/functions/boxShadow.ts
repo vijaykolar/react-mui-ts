@@ -1,9 +1,10 @@
 /**
   The boxShadow() function helps you to create a box shadow for an element
  */
-//  React TS Helper Functions
-import rgba from "./rgba";
-import pxToRem from "./pxToRem";
+
+// Material Dashboard 2 PRO React TS Helper Functions
+import rgba from "assets/theme/functions/rgba";
+import pxToRem from "assets/theme/functions/pxToRem";
 
 function boxShadow(
   offset: number[],
