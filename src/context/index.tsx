@@ -31,7 +31,7 @@ function reducer(state: StateTypes, action: ActionTypes) {
 // React TS context provider
 function MaterialUIControllerProvider({ children }: { children: ReactNode }): JSX.Element {
   const initialState: StateTypes = {
-    darkMode: true,
+    darkMode: false,
   };
 
   const [controller, dispatch] = useReducer(reducer, initialState);
