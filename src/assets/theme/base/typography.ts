@@ -1,10 +1,16 @@
+/**
+ * The base typography styles for the React TS.
+ * You can add new typography style using this file.
+ * You can customized the typography styles for the entire React TS using thie file.
+ */
+
 // React TS Base Styles
-import colors from "assets/theme/base/colors";
+import colors from "assets/theme-dark/base/colors";
 
 // React TS Helper Functions
-import pxToRem from "assets/theme/functions/pxToRem";
+import pxToRem from "assets/theme-dark/functions/pxToRem";
 
-const { dark } = colors;
+const { white } = colors;
 
 // types
 interface DisplayTypes {
@@ -146,13 +152,13 @@ const baseProperties = {
 
 const baseHeadingProperties = {
   fontFamily: baseProperties.fontFamily,
-  color: dark.main,
+  color: white.main,
   fontWeight: baseProperties.fontWeightBold,
 };
 
 const baseDisplayProperties = {
   fontFamily: baseProperties.fontFamily,
-  color: dark.main,
+  color: white.main,
   fontWeight: baseProperties.fontWeightLight,
   lineHeight: 1.2,
 };

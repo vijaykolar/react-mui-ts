@@ -1,14 +1,14 @@
 /**
- * The base typography.
- * You can add new typography using this file.
- * You can customized the typography for the entire project using thie file.
+ * The base typography styles for the React TS.
+ * You can add new typography style using this file.
+ * You can customized the typography styles for the entire React TS using thie file.
  */
 
-// Project Base Styles
-import colors from "./colors";
+// React TS Base Styles
+import colors from "assets/theme-dark/base/colors";
 
-// Project Helper Functions
-import pxToRem from "../functions/pxToRem";
+// React TS Helper Functions
+import pxToRem from "assets/theme-dark/functions/pxToRem";
 
 const { white } = colors;
 

@@ -1,7 +1,7 @@
 /**
- * The base breakpoints.
+ * The base breakpoints for the React TS.
  * You can add new breakpoints using this file.
- * You can customized the breakpoints for the entire project using thie file.
+ * You can customized the breakpoints for the entire React TS using thie file.
  */
 
 const breakpoints = {

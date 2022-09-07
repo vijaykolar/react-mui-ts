@@ -1,7 +1,7 @@
 /**
- * The base colors.
- * You can add new colors using this file.
- * You can customized the colors for the entire project using thie file.
+ * The base colors for the React TS.
+ * You can add new color using this file.
+ * You can customized the colors for the entire React TS using thie file.
  */
 
 // types
@@ -85,6 +85,22 @@ interface Types {
         dark: GradientsTypes;
       }
     | any;
+  socialMediaColors:
+    | {
+        facebook: SocialMediaColorsTypes;
+        twitter: SocialMediaColorsTypes;
+        instagram: SocialMediaColorsTypes;
+        linkedin: SocialMediaColorsTypes;
+        pinterest: SocialMediaColorsTypes;
+        youtube: SocialMediaColorsTypes;
+        vimeo: SocialMediaColorsTypes;
+        slack: SocialMediaColorsTypes;
+        dribbble: SocialMediaColorsTypes;
+        github: SocialMediaColorsTypes;
+        reddit: SocialMediaColorsTypes;
+        tumblr: SocialMediaColorsTypes;
+      }
+    | any;
   badgeColors:
     | {
         primary: BadgeColorsTypes;
@@ -116,12 +132,14 @@ interface Types {
 
 const colors: Types = {
   background: {
-    default: "#f0f2f5",
+    default: "#1a2035",
+    sidenav: "#1f283e",
+    card: "#202940",
   },
 
   text: {
-    main: "#7b809a",
-    focus: "#7b809a",
+    main: "#ffffffcc",
+    focus: "#ffffffcc",
   },
 
   transparent: {
@@ -170,8 +188,8 @@ const colors: Types = {
   },
 
   light: {
-    main: "#f0f2f5",
-    focus: "#f0f2f5",
+    main: "#f0f2f566",
+    focus: "#f0f2f566",
   },
 
   dark: {
@@ -228,10 +246,73 @@ const colors: Types = {
     },
 
     dark: {
-      main: "#42424a",
-      state: "#191919",
+      main: "#323a54",
+      state: "#1a2035",
     },
   },
+
+  socialMediaColors: {
+    facebook: {
+      main: "#3b5998",
+      dark: "#344e86",
+    },
+
+    twitter: {
+      main: "#55acee",
+      dark: "#3ea1ec",
+    },
+
+    instagram: {
+      main: "#125688",
+      dark: "#0e456d",
+    },
+
+    linkedin: {
+      main: "#0077b5",
+      dark: "#00669c",
+    },
+
+    pinterest: {
+      main: "#cc2127",
+      dark: "#b21d22",
+    },
+
+    youtube: {
+      main: "#e52d27",
+      dark: "#d41f1a",
+    },
+
+    vimeo: {
+      main: "#1ab7ea",
+      dark: "#13a3d2",
+    },
+
+    slack: {
+      main: "#3aaf85",
+      dark: "#329874",
+    },
+
+    dribbble: {
+      main: "#ea4c89",
+      dark: "#e73177",
+    },
+
+    github: {
+      main: "#24292e",
+      dark: "#171a1d",
+    },
+
+    reddit: {
+      main: "#ff4500",
+      dark: "#e03d00",
+    },
+
+    tumblr: {
+      main: "#35465c",
+      dark: "#2a3749",
+    },
+  },
+
   badgeColors: {
     primary: {
       background: "#f8b3ca",

@@ -1,16 +1,16 @@
 /**
- * The base box-shadow styles for the React TSUI
+ * The base box-shadow styles for the React TS.
  * You can add new box-shadow using this file.
- * You can customized the box-shadow for the entire React TSUI  using thie file.
+ * You can customized the box-shadow for the entire React TS using thie file.
  */
 
-//  React TS Base Styles
-import colors from "./colors";
+// React TS Base Styles
+import colors from "assets/theme-dark/base/colors";
 
-//  React TS Helper Functions
-import boxShadow from "../functions/boxShadow";
+// React TS Helper Functions
+import boxShadow from "assets/theme-dark/functions/boxShadow";
 
-const { black, white, tabs, coloredShadows } = colors;
+const { black, dark, tabs, coloredShadows } = colors;
 
 // types
 interface Types {
@@ -45,12 +45,12 @@ interface Types {
 const boxShadows: Types = {
   xs: boxShadow([0, 2], [9, -5], black.main, 0.15),
   sm: boxShadow([0, 5], [10, 0], black.main, 0.12),
-  md: `${boxShadow([0, 4], [6, -1], black.main, 0.1)}, ${boxShadow(
-    [0, 2],
-    [4, -1],
+  md: `${boxShadow([0, 2], [2, 0], black.main, 0.14)}, ${boxShadow(
+    [0, 3],
+    [1, -2],
     black.main,
-    0.06
-  )}`,
+    0.2
+  )}, ${boxShadow([0, 1], [5, 0], black.main, 0.12)}`,
   lg: `${boxShadow([0, 10], [15, -3], black.main, 0.1)}, ${boxShadow(
     [0, 4],
     [6, -2],
@@ -116,7 +116,7 @@ const boxShadows: Types = {
     )}`,
   },
 
-  navbarBoxShadow: `${boxShadow([0, 0], [1, 1], white.main, 0.9, "inset")}, ${boxShadow(
+  navbarBoxShadow: `${boxShadow([0, 0], [1, 1], dark.main, 0.9, "inset")}, ${boxShadow(
     [0, 20],
     [27, 0],
     black.main,

@@ -166,7 +166,7 @@ declare module "@mui/material/styles" {
           dark: GradientsTypes;
         }
       | any;
-    socialMediaColors?:
+    socialMediaColors:
       | {
           facebook: SocialMediaColorsTypes;
           twitter: SocialMediaColorsTypes;
@@ -271,7 +271,7 @@ declare module "@mui/material/styles" {
           dark: GradientsTypes;
         }
       | any;
-    socialMediaColors?:
+    socialMediaColors:
       | {
           facebook: SocialMediaColorsTypes;
           twitter: SocialMediaColorsTypes;

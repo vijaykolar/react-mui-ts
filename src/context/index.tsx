@@ -1,11 +1,6 @@
-/**
-  This file is used for controlling the global states of the components,
-  you can customize the states for the different components here.
-*/
-
 import { createContext, ReactNode, useContext, useMemo, useReducer } from "react";
 
-// main context
+// React TS main context
 const MaterialUI = createContext<any>(null);
 
 // Setting custom name for the context which is visible on react dev tools
@@ -21,7 +16,7 @@ interface ActionTypes {
   value: any;
 }
 
-// React reducer
+// React TS reducer
 function reducer(state: StateTypes, action: ActionTypes) {
   switch (action.type) {
     case "DARKMODE": {
@@ -33,10 +28,10 @@ function reducer(state: StateTypes, action: ActionTypes) {
   }
 }
 
-// React context provider
+// React TS context provider
 function MaterialUIControllerProvider({ children }: { children: ReactNode }): JSX.Element {
   const initialState: StateTypes = {
-    darkMode: false,
+    darkMode: true,
   };
 
   const [controller, dispatch] = useReducer(reducer, initialState);
@@ -46,7 +41,7 @@ function MaterialUIControllerProvider({ children }: { children: ReactNode }): JS
   return <MaterialUI.Provider value={value}>{children}</MaterialUI.Provider>;
 }
 
-// custom hook for using context
+// React custom hook for using context
 function useMaterialUIController() {
   const context = useContext(MaterialUI);
 
@@ -59,6 +54,7 @@ function useMaterialUIController() {
   return context;
 }
 
+// Context module functions
 const setDarkMode = (
   dispatch: (arg: { type: "DARKMODE"; value: boolean }) => void,
   value: boolean

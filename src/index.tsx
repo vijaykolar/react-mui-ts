@@ -1,19 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
+import App from "App";
 
-import App from "./App";
+// React TS Context Provider
+import { MaterialUIControllerProvider } from "context";
 
-// React context Provider
-import { MaterialUIControllerProvider } from "./context";
-
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <MaterialUIControllerProvider>
-        <App />
-      </MaterialUIControllerProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+ReactDOM.render(
+  <BrowserRouter>
+    <MaterialUIControllerProvider>
+      <App />
+    </MaterialUIControllerProvider>
+  </BrowserRouter>,
+  document.getElementById("root")
 );

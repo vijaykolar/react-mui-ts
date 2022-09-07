@@ -1,36 +1,31 @@
 // @mui material components
 import { createTheme } from "@mui/material";
 
-// Base Styles
-import colors from "./base/colors";
-import breakpoints from "./base/breakpoints";
+// React TS Base Styles
+import colors from "assets/theme/base/colors";
+import breakpoints from "assets/theme/base/breakpoints";
 import typography from "assets/theme/base/typography";
-import boxShadows from "./base/boxShadows";
-import borders from "./base/borders";
+import boxShadows from "assets/theme/base/boxShadows";
+import borders from "assets/theme/base/borders";
 
-// React TS Helper Functions
+//  React TS Helper Functions
 import boxShadow from "assets/theme/functions/boxShadow";
-
-// React TS components base styles for @mui material components
-import button from "assets/theme/components/button";
+import hexToRgb from "assets/theme/functions/hexToRgb";
+import linearGradient from "assets/theme/functions/linearGradient";
+import pxToRem from "assets/theme/functions/pxToRem";
+import rgba from "assets/theme/functions/rgba";
 
 export default createTheme({
   breakpoints: { ...breakpoints },
   palette: { ...colors },
   typography: { ...typography },
-  borders: { ...borders },
   boxShadows: { ...boxShadows },
+  borders: { ...borders },
   functions: {
     boxShadow,
-  },
-  components: {
-    // MuiCssBaseline: {
-    //   styleOverrides: {
-    //     ...globals,
-    //     ...flatpickr,
-    //     ...container,
-    //   },
-    // },
-    MuiButton: { ...button },
+    hexToRgb,
+    linearGradient,
+    pxToRem,
+    rgba,
   },
 });

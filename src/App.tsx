@@ -1,36 +1,28 @@
-import { CssBaseline, Paper, ThemeProvider } from "@mui/material";
+// @mui material components
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 
-// React contexts
-import { useMaterialUIController } from "./context";
+// React TS themes
+import theme from "assets/theme";
 
-// React Light Mode theme
-import theme from "./assets/theme";
+// React TS Dark Mode themes
+import themeDark from "assets/theme-dark";
 
-// React Dark Mode theme
-import themeDark from "./assets/theme-dark";
+// React TS contexts
+import { useMaterialUIController } from "context";
 import MDButton from "components/MDButton";
 
-function App() {
-  const [controller, dispatch] = useMaterialUIController();
+export default function App() {
+  const [controller] = useMaterialUIController();
   const { darkMode } = controller;
+
   return (
     <ThemeProvider theme={darkMode ? themeDark : theme}>
-      <Paper>sdasd</Paper>
-      <MDButton variant="text" color="success">
-        Props
-      </MDButton>
-      <MDButton variant="outlined" color="secondary">
-        Props
-      </MDButton>
-      <MDButton variant="gradient" color="warning">
-        Props d
-      </MDButton>
-      <MDButton variant="text" color="error">
-        Props
-      </MDButton>
       <CssBaseline />
+      <button>This is button</button>
+      <MDButton circular size="large" variant="contained" color="success">
+        Button
+      </MDButton>
     </ThemeProvider>
   );
 }
-
-export default App;
