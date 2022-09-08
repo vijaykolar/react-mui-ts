@@ -1,4 +1,4 @@
-// @mui material components
+// @mui components
 import { createTheme } from "@mui/material";
 
 // React TS Base Styles
