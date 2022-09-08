@@ -12,6 +12,7 @@ import themeDark from "assets/theme-dark";
 import { useMaterialUIController } from "context";
 import MDButton from "components/MDButton";
 import { Card, CardContent, CardHeader, Container, Stack } from "@mui/material";
+import MDBox from "components/MDBox";
 
 export default function App() {
   const [controller] = useMaterialUIController();
@@ -21,6 +22,44 @@ export default function App() {
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
       <Container maxWidth="xl">
+        <div>
+          <h1>Box</h1>
+          <Stack spacing={1} direction="row">
+            <MDBox
+              color="white"
+              bgColor="success"
+              // variant="gradient"
+              borderRadius="lg"
+              shadow="lg"
+              opacity={1}
+              p={2}
+            >
+              This is box
+            </MDBox>
+            <MDBox
+              color="white"
+              bgColor="info"
+              variant="gradient"
+              borderRadius="lg"
+              shadow="lg"
+              opacity={1}
+              p={2}
+            >
+              Box
+            </MDBox>
+            <MDBox
+              color="info"
+              bgColor="warning"
+              variant="contained"
+              borderRadius="lg"
+              shadow="lg"
+              opacity={1}
+              p={2}
+            >
+              Box
+            </MDBox>
+          </Stack>
+        </div>
         {/* Cards */}
         <div>
           <h1>Cards</h1>
