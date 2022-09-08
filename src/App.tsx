@@ -13,6 +13,7 @@ import { useMaterialUIController } from "context";
 import MDButton from "components/MDButton";
 import { Card, CardContent, CardHeader, Container, Stack } from "@mui/material";
 import MDBox from "components/MDBox";
+import MDAlert from "components/MDAlert";
 
 export default function App() {
   const [controller] = useMaterialUIController();
@@ -22,6 +23,14 @@ export default function App() {
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
       <Container maxWidth="xl">
+        <div>
+          <h1>Alert</h1>
+          <MDAlert color="error">This is an error alert!</MDAlert>
+          <MDAlert color="warning">This is an alert!</MDAlert>
+          <MDAlert dismissible color="success">
+            This is an alert!
+          </MDAlert>
+        </div>
         <div>
           <h1>Box</h1>
           <Stack spacing={1} direction="row">
