@@ -14,6 +14,7 @@ import MDButton from "components/MDButton";
 import { Card, CardContent, CardHeader, Container, Stack } from "@mui/material";
 import MDBox from "components/MDBox";
 import MDAlert from "components/MDAlert";
+import MDInput from "components/MDInput";
 
 export default function App() {
   const [controller] = useMaterialUIController();
@@ -24,7 +25,19 @@ export default function App() {
       <CssBaseline />
       <Container maxWidth="xl">
         <div>
-          <h1>Alert</h1>
+          <h1>Text Field</h1>
+          <Stack direction="row" spacing={1}>
+            <MDInput label="Type here..." />
+            <MDInput label="Type here..." success />
+            <MDInput label="Type here..." error />
+            <MDInput variant="standard" label="Type here..." />
+            <MDInput type="password" label="Type here..." size="small" />
+            <MDInput disabled label="Type here..." size="small" />
+            {/* <MDInput label="Type here..." multiline rows={4} /> */}
+          </Stack>
+        </div>
+        <div>
+          <h1>Alerts</h1>
           <MDAlert color="error">This is an error alert!</MDAlert>
           <MDAlert color="warning">This is an alert!</MDAlert>
           <MDAlert dismissible color="success">

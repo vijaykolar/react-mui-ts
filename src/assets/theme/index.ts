@@ -15,6 +15,12 @@ import linearGradient from "assets/theme/functions/linearGradient";
 import pxToRem from "assets/theme/functions/pxToRem";
 import rgba from "assets/theme/functions/rgba";
 
+// React TS components base styles for @mui material components
+import input from "assets/theme/components/form/input";
+import inputLabel from "assets/theme/components/form/inputLabel";
+import inputOutlined from "assets/theme/components/form/inputOutlined";
+import textField from "assets/theme/components/form/textField";
+
 export default createTheme({
   breakpoints: { ...breakpoints },
   palette: { ...colors },
@@ -27,5 +33,11 @@ export default createTheme({
     linearGradient,
     pxToRem,
     rgba,
+  },
+  components: {
+    MuiInput: { ...input },
+    MuiInputLabel: { ...inputLabel },
+    MuiOutlinedInput: { ...inputOutlined },
+    MuiTextField: { ...textField },
   },
 });
