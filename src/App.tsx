@@ -15,6 +15,12 @@ import { Card, CardContent, CardHeader, Container, Stack } from "@mui/material";
 import MDBox from "components/MDBox";
 import MDAlert from "components/MDAlert";
 import MDInput from "components/MDInput";
+import MDPagination from "components/MDPagination";
+
+// @mui icons
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import Icon from "@mui/material/Icon";
 
 export default function App() {
   const [controller] = useMaterialUIController();
@@ -24,6 +30,43 @@ export default function App() {
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
       <Container maxWidth="xl">
+        <div>
+          <h1>Pagination</h1>
+          <MDPagination color="warning" variant="contained">
+            <MDPagination item>
+              <Icon>
+                <KeyboardArrowLeftIcon />
+              </Icon>
+            </MDPagination>
+            <MDPagination item active>
+              1
+            </MDPagination>
+            <MDPagination item>2</MDPagination>
+            <MDPagination item>3</MDPagination>
+            <MDPagination item>
+              <Icon>
+                <KeyboardArrowRightIcon />
+              </Icon>
+            </MDPagination>
+          </MDPagination>
+          <MDPagination size="large" color="error">
+            <MDPagination item>
+              <Icon>
+                <KeyboardArrowLeftIcon />
+              </Icon>
+            </MDPagination>
+            <MDPagination item active>
+              1
+            </MDPagination>
+            <MDPagination item>2</MDPagination>
+            <MDPagination item>3</MDPagination>
+            <MDPagination item>
+              <Icon>
+                <KeyboardArrowRightIcon />
+              </Icon>
+            </MDPagination>
+          </MDPagination>
+        </div>
         <div>
           <h1>Text Field</h1>
           <Stack direction="row" spacing={1}>
