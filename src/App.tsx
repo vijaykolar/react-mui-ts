@@ -81,10 +81,10 @@ export default function App() {
         </div>
         <div>
           <h1>Alerts</h1>
-          <MDAlert color="error">This is an error alert!</MDAlert>
-          <MDAlert color="warning">This is an alert!</MDAlert>
+          <MDAlert color="error">This is an error</MDAlert>
+          <MDAlert color="warning">This is waring</MDAlert>
           <MDAlert dismissible color="success">
-            This is an alert!
+            This is success
           </MDAlert>
         </div>
         <div>
